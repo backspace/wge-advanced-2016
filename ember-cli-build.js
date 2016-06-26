@@ -3,6 +3,7 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var Filter = require('broccoli-filter');
+var debug = require('broccoli-stew').debug;
 
 CommentFilter.prototype = Object.create(Filter.prototype);
 CommentFilter.prototype.constructor = CommentFilter;
@@ -35,5 +36,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return new CommentFilter(app.toTree());
+  return debug(new CommentFilter(debug(app.toTree(), {name: 'before'})), {name: 'after'});
 };
