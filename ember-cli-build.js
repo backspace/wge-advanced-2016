@@ -6,6 +6,8 @@ var Filter = require('broccoli-filter');
 
 CommentFilter.prototype = Object.create(Filter.prototype);
 CommentFilter.prototype.constructor = CommentFilter;
+CommentFilter.prototype.extensions = ['js'];
+CommentFilter.prototype.targetExtension = 'js';
 
 function CommentFilter(inputNode) {
   Filter.call(this, inputNode);
