@@ -47,5 +47,8 @@
     "paths": [
       "lib/placeholder-helper"
     ]
+  },
+  "dependencies": {
+    "broccoli-filter": "^1.2.3"
   }
 }
