@@ -1,0 +1,12 @@
+nav li a {
+  text-decoration: none;
+}
+
+nav li a.active {
+  text-decoration: underline;
+}
+
+nav li a.ember-transitioning-in:after {
+  content: ' (loading!)';
+  text-decoration: none;
+}
