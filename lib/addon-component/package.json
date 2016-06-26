@@ -1,0 +1,9 @@
+{
+  "name": "addon-component",
+  "dependencies": {
+    "ember-cli-htmlbars": "^1.0.3"
+  },
+  "keywords": [
+    "ember-addon"
+  ]
+}

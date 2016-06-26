@@ -45,7 +45,8 @@
   },
   "ember-addon": {
     "paths": [
-      "lib/placeholder-helper"
+      "lib/placeholder-helper",
+      "lib/addon-component"
     ]
   },
   "dependencies": {
