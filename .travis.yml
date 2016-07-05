@@ -1,22 +1,24 @@
----
 language: node_js
 node_js:
-  - "4"
-
+- '4'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - npm config set spin false
-  - npm install -g bower
-  - npm install phantomjs-prebuilt
-
+- npm config set spin false
+- npm install -g bower
+- npm install phantomjs-prebuilt
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: DnX2bVSwnBI+0uK49Gswgr+QhhSnUr73YcSk0nL6j/TiNQVr9dVhJp9yMftYbQKtX/RKFPjAmuQbIJ+QoAok/EcDkVbP/WfHjJhuUf5dquOOGNVLJOi4YRQH/SPglZWdecRkHUh2EZutmqXLUmDDRCP9kSmYoIsyzcuL/nzLbtGsznr5dBLhbHsZ3vr5pL5emgGSDcKDm81LuX41CQgk0sDJ7YVO6BmX+bzKCP0OV9nGr1TJeEgvP+V/jXL5yGGOCu8PSkcOS+2vi0VwsvG4uG1S91rvfJ+l+hL279EhhpjYl7c2YEQ4v2xeakUW/NzeArTnV6hqw7pgI4ae6TsBKP0u4wvfmnr6RWb4VgzLVp69DdQeR6LCIw019GyK6mD1nfl16F8TaAMCNlCfeLiL12wtkBUZBJnLTxu51AV5n1bTM8MyT5O6f2RGEidBOpIWY1q9qNNSmTNlZR04ZkHSNG3kY/avpKvxVm5AV1/YU/iuBfAhhSUNTRlYkA0VtPMbC2dVa6DJnLT261gPEtndXglyxZaTuHxbFhGPW6AEBAgmY8aSmmku7C/zdD/6OHStak6aL01m2oN1a75nz7p19SHzgvoc1N22DOfRp2MQ5oKMdjm7EAxYkChVylw+upFDJWTAdtR68XC+aZnX3HIAXJt4WxIZTJe5kwBNwi82W2M=
+  app: wge-advanced-2016
+  on:
+    repo: backspace/wge-advanced-2016
+    branch: primary
